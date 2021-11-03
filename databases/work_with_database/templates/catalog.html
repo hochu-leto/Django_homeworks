@@ -14,6 +14,13 @@
 
         <div class="content">
             {# Здесь должен отображаться каталог с телефонами #}
+            {% for phone in phones_list %}
+                <div>
+                    <h2><a href="/{{ phone.slug }}">{{ phone.name }}</a></h2>
+                    <b> Стоимость: </b> {{ phone.price }}<br>
+                    <img src={{ phone.image }} alt={{ phone.name }} /> <br>
+                </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
