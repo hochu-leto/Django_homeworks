@@ -14,7 +14,7 @@ class Phone(models.Model):
                                                                                 '\\Django\\dj-homeworks\\databases'
                                                                                 '\\work_with_database\\телефон.png')
     release_date = models.DateField(verbose_name='Дата выпуска', default='1/1/2001')
-    lte_exists = models.BooleanField(verbose_name='Наличие LTE', default=False)
+    lte_exists = models.TextField(verbose_name='Наличие LTE', default='Нет')
     slug = models.SlugField(blank=True, unique=True, verbose_name='URL')
 
 

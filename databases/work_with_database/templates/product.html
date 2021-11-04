@@ -5,10 +5,17 @@
 {% block content %}
     <div class="container">
         <div class="header">
-            <h1>Телефон</h1>
+            <a href="/catalog"> <-- Назад в каталог</a>
+            <h1><a href="/catalog/{{ phone.slug }}">Телефон {{ phone.name }}</a></h1>
         </div>
         <div class="content">
-
+                <div>
+                    Стоимость: {{ phone.price }}<br>
+                    Дата выпуска: {{ phone.release_date }}<br>
+                    Наличие LTE: {{ phone.lte_exists }}<br>
+                    И ещё куча других характеристик... <br>
+                    <img src={{ phone.image }} alt={{ phone.name }} /> <br>
+                </div>
         </div>
     </div>
 {% endblock %}
